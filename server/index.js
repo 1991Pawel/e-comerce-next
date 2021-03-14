@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('work');
+  res.send('server is ready!');
 });
 app.use('/user', userRoutes);
 
