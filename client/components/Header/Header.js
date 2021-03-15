@@ -1,11 +1,31 @@
-import { RiShoppingBagLine, RiSearchLine, RiHeartLine } from 'react-icons/ri';
+import Link from 'next/link';
 import styles from '../Header/header.module.css';
+
+import { RiShoppingBagLine, RiSearchLine, RiHeartLine } from 'react-icons/ri';
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__inner}>
-        <div className={styles.header__logo}>Logo</div>
+        <div>
+          <Link href="/">
+            <a className={styles.header__logo}>LOGO</a>
+          </Link>
+        </div>
+        <nav className={styles.nav}>
+          <ul className={styles.nav__menu}>
+            <li className={styles.nav__item}>
+              <Link href="/man">
+                <a className={styles.nav__link}>man</a>
+              </Link>
+            </li>
+            <li className={styles.nav__item}>
+              <Link href="/woman">
+                <a className={styles.nav__link}>women</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
         <div className={styles.options}>
           <button className={styles.option}>
             <RiHeartLine size="28" />
