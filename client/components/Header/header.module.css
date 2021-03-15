@@ -1,0 +1,58 @@
+.header {
+  max-width: 1400px;
+  margin: 0 auto;
+  border: 1px solid green;
+}
+
+.header__inner {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 100px;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 3rem;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.option {
+  margin-right: 2rem;
+}
+
+.option {
+  position: relative;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.option__count {
+  position: absolute;
+  bottom: 50%;
+  right: -0.5rem;
+  background: rgb(223, 165, 40);
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.button {
+  min-width: 10rem;
+  height: 3.5rem;
+  background: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+}

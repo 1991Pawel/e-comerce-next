@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Layout from 'components/Layout/Layout';
 
 export default function Form() {
   const [email, setEmail] = useState('test@wp.pl');
@@ -10,11 +11,11 @@ export default function Form() {
     console.log(password, email, confirmPassword);
   };
   return (
-    <div>
+    <Layout>
       <h1>FORM</h1>
       <form onSubmit={submitForm}>
         <button type="submit">submit</button>
       </form>
-    </div>
+    </Layout>
   );
 }
