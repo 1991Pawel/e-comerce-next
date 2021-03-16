@@ -1,7 +1,6 @@
 .header {
   max-width: 1400px;
   margin: 0 auto;
-  border: 1px solid green;
 }
 
 .header__inner {
@@ -9,12 +8,7 @@
   grid-template-columns: 150px 1fr 300px;
   grid-template-rows: 100px;
   align-items: center;
-}
-
-.header__logo {
-  font-size: 3rem;
-  text-decoration: none;
-  color: #000;
+  padding: 0 1rem;
 }
 
 .options {
@@ -65,9 +59,10 @@
 
 .nav__link {
   margin-right: 2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-decoration: none;
   color: #000;
+  text-transform: uppercase;
 }
 
 .nav__item {

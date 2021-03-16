@@ -9,7 +9,9 @@ export default function Header() {
       <div className={styles.header__inner}>
         <div>
           <Link href="/">
-            <a className={styles.header__logo}>LOGO</a>
+            <a>
+              <img src="./logo.png" alt="" />
+            </a>
           </Link>
         </div>
         <nav className={styles.nav}>

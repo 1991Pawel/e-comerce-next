@@ -1,0 +1,44 @@
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.collection {
+  height: 500px;
+  display: flex;
+  border: 1px solid red;
+}
+
+.collection__content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection__photo {
+  width: 60%;
+}
+
+.collection__img {
+  width: 100%;
+  height: auto;
+}
+
+.collection__title {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 300px;
+}
+
+.collection__btn {
+  margin-top: 3rem;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 1.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
