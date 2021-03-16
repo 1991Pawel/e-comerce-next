@@ -4,21 +4,21 @@
 }
 
 .collection {
-  height: 500px;
+  height: 550px;
   display: flex;
-  border: 1px solid red;
 }
 
 .collection__content {
-  width: 40%;
+  width: 45%;
   display: flex;
   flex-direction: column;
+  padding-left: 5rem;
   justify-content: center;
-  align-items: center;
 }
 
 .collection__photo {
-  width: 60%;
+  width: 55%;
+  overflow: hidden;
 }
 
 .collection__img {
@@ -41,4 +41,5 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  align-self: flex-start;
 }
