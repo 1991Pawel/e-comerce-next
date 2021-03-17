@@ -8,7 +8,10 @@ export default function Home() {
       <section className={styles.wrapper}>
         <div className={styles.collection}>
           <div className={styles.collection__content}>
-            <h2 className={styles.collection__title}>New in for woman</h2>
+            <h2 className={styles.collection__title}>
+              New <span className={styles.collection__special}>in for</span>
+              <span className={styles.collection__special}>women</span>
+            </h2>
             <button className={styles.collection__btn}>See more</button>
           </div>
           <div className={styles.collection__photo}>
@@ -24,7 +27,12 @@ export default function Home() {
             <img className={styles.collection__img} src="./images/man.jpg" alt="man collection" />
           </div>
           <div className={styles.collection__content}>
-            <h2 className={styles.collection__title}>New in for woman</h2>
+            <h2 className={styles.collection__title}>
+              New <span className={styles.collection__special}>in for</span>
+              <span className={`${styles.collection__special} ${styles.collection__special__bg}`}>
+                man
+              </span>
+            </h2>
             <button className={styles.collection__btn}>See more</button>
           </div>
         </div>
