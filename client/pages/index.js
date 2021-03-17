@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/index.module.css';
+import { MdKeyboardArrowRight } from 'react-icons/md';
+import { RiArrowGoBackFill, RiTruckLine } from 'react-icons/ri';
+import { BiSupport } from 'react-icons/bi';
 
 export default function Home() {
   return (
@@ -12,7 +15,10 @@ export default function Home() {
               New <span className={styles.collection__special}>in for</span>
               <span className={styles.collection__special}>women</span>
             </h2>
-            <button className={styles.collection__btn}>See more</button>
+            <button className={styles.collection__btn}>
+              See more
+              <MdKeyboardArrowRight size="25" />
+            </button>
           </div>
           <div className={styles.collection__photo}>
             <img
@@ -33,7 +39,38 @@ export default function Home() {
                 man
               </span>
             </h2>
-            <button className={styles.collection__btn}>See more</button>
+            <button className={styles.collection__btn}>
+              See more
+              <MdKeyboardArrowRight size="25" />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section className={styles.feature}>
+        <div className={styles.feature__wrapper}>
+          <div className={styles.feature__form}>
+            <h3>subscribe for newsletter</h3>
+            <form className={styles.form}>
+              <input className={styles.form__input} placeholder="Email adress" type="text" />
+              <button className={styles.form__btn} type="button">
+                ok
+              </button>
+            </form>
+          </div>
+          <div className={styles.feature__box}>
+            <RiTruckLine size={35} />
+            <h3>Free Shipping</h3>
+            <p>Free shipping for orders over $25$</p>
+          </div>
+          <div className={styles.feature__box}>
+            <RiArrowGoBackFill size={35} />
+            <h3>Return & Refund</h3>
+            <p>Free 100% money back guarantee</p>
+          </div>
+          <div className={styles.feature__box}>
+            <BiSupport size={35} />
+            <h3>Quality Support</h3>
+            <p>Always online feedback 24/7</p>
           </div>
         </div>
       </section>

@@ -79,9 +79,68 @@
   margin-top: 3rem;
   text-transform: uppercase;
   color: #000;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   background: transparent;
   border: none;
   cursor: pointer;
   align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 14rem;
+  background: #000;
+  color: #fff;
+}
+
+.collection__btn svg {
+  margin-left: 0.4rem;
+}
+
+.feature {
+  background: rgb(12, 12, 12);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.feature__wrapper {
+  display: grid;
+  grid-template-columns: 300px repeat(3, 1fr);
+  padding: 2rem 0;
+}
+
+.feature__box {
+  color: #fff;
+  text-align: center;
+}
+
+.feature__form {
+  color: #fff;
+}
+
+.feature__box p {
+  color: rgb(126, 126, 126);
+  font-size: 1.4rem;
+}
+
+.form {
+  height: 3rem;
+  display: flex;
+}
+
+.form__btn {
+  border: none;
+  height: 100%;
+  width: 5rem;
+  background: rgb(82, 82, 82);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.form__input {
+  height: 100%;
+  border: none;
+  text-indent: 1rem;
 }
