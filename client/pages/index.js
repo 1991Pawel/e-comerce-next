@@ -49,7 +49,7 @@ export default function Home() {
       <section className={styles.feature}>
         <div className={styles.feature__wrapper}>
           <div className={styles.feature__form}>
-            <h3>subscribe for newsletter</h3>
+            <h3 className={styles.feature__title}>subscribe for newsletter</h3>
             <form className={styles.form}>
               <input className={styles.form__input} placeholder="Email adress" type="text" />
               <button className={styles.form__btn} type="button">
@@ -59,17 +59,17 @@ export default function Home() {
           </div>
           <div className={styles.feature__box}>
             <RiTruckLine size={35} />
-            <h3>Free Shipping</h3>
+            <h3 className={styles.feature__title}>Free Shipping</h3>
             <p>Free shipping for orders over $25$</p>
           </div>
           <div className={styles.feature__box}>
             <RiArrowGoBackFill size={35} />
-            <h3>Return & Refund</h3>
+            <h3 className={styles.feature__title}>Return & Refund</h3>
             <p>Free 100% money back guarantee</p>
           </div>
           <div className={styles.feature__box}>
             <BiSupport size={35} />
-            <h3>Quality Support</h3>
+            <h3 className={styles.feature__title}>Quality Support</h3>
             <p>Always online feedback 24/7</p>
           </div>
         </div>
