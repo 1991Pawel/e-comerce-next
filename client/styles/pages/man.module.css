@@ -1,0 +1,14 @@
+.man {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 60vh;
+}
+.aside {
+  border: 1px solid #ccc;
+}
+
+.wrapper {
+  max-width: 1400px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}

@@ -1,10 +1,19 @@
 import Head from 'next/head';
 import Layout from 'components/Layout/Layout';
+import styles from '../styles/pages/man.module.css';
+
+import { products } from '../data';
+import ProductList from '../components/ProductList/ProductList';
 
 export default function Man() {
   return (
     <Layout>
-      <h1>Man</h1>
+      <div className={styles.wrapper}>
+        <section className={styles.man}>
+          <aside className={styles.aside}>ASIDE</aside>
+          <ProductList products={products} />
+        </section>
+      </div>
     </Layout>
   );
 }

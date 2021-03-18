@@ -1,0 +1,19 @@
+.products {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  list-style: none;
+  justify-items: center;
+}
+
+.product {
+  border: 1px solid #ccc;
+}
+
+.product__img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
