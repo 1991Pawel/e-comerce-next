@@ -9,6 +9,7 @@ export default function Man() {
   return (
     <Layout>
       <div className={styles.wrapper}>
+        <h2>MAN</h2>
         <section className={styles.man}>
           <aside className={styles.aside}>ASIDE</aside>
           <ProductList products={products} />
