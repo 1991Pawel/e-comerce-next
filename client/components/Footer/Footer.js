@@ -48,6 +48,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+        <div className={styles.copyright}>
+          <p className={styles.copyright__desc}>© 2021 BestStore</p>
+        </div>
       </div>
     </footer>
   );
