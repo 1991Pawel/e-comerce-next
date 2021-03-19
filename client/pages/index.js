@@ -23,13 +23,13 @@ export default function Home() {
           <div className={styles.collection__photo}>
             <img
               className={styles.collection__img}
-              src="./images/women.jpg"
-              alt="women collection"
+              src="./images/woman.jpg"
+              alt="woman collection"
             />
           </div>
         </div>
         <div className={styles.collection}>
-          <div className={styles.collection__photo}>
+          <div>
             <img className={styles.collection__img} src="./images/man.jpg" alt="man collection" />
           </div>
           <div className={styles.collection__content}>

@@ -1,9 +1,11 @@
 import Head from 'next/head';
-import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/man.module.css';
 
-import { products } from '../data';
+import Layout from 'components/Layout/Layout';
+import SideBar from '../components/SideBar/Sidebar';
 import ProductList from '../components/ProductList/ProductList';
+
+import { products } from '../data';
 
 export default function Man() {
   return (
@@ -11,7 +13,7 @@ export default function Man() {
       <div className={styles.wrapper}>
         <h2>MAN</h2>
         <section className={styles.man}>
-          <aside className={styles.aside}>ASIDE</aside>
+          <SideBar />
           <ProductList products={products} />
         </section>
       </div>

@@ -1,17 +1,19 @@
 import Head from 'next/head';
-import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/man.module.css';
 
-import { products } from '../data';
+import Layout from 'components/Layout/Layout';
+import SideBar from '../components/SideBar/Sidebar';
 import ProductList from '../components/ProductList/ProductList';
+
+import { products } from '../data';
 
 export default function Woman() {
   return (
     <Layout>
       <div className={styles.wrapper}>
-        <h2>WOMEN</h2>
+        <h2>WOMAN</h2>
         <section className={styles.man}>
-          <aside className={styles.aside}>ASIDE</aside>
+          <SideBar />
           <ProductList products={products} />
         </section>
       </div>

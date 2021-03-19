@@ -10,7 +10,7 @@ export default function Header() {
         <div>
           <Link href="/">
             <a>
-              <img src="./logo.png" alt="" />
+              <img src="../logo.png" alt="logo" />
             </a>
           </Link>
         </div>
@@ -23,7 +23,7 @@ export default function Header() {
             </li>
             <li className={styles.nav__item}>
               <Link href="/woman">
-                <a className={styles.nav__link}>women</a>
+                <a className={styles.nav__link}>woman</a>
               </Link>
             </li>
           </ul>

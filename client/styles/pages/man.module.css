@@ -3,9 +3,6 @@
   grid-template-columns: 300px 1fr;
   min-height: 60vh;
 }
-.aside {
-  border: 1px solid #ccc;
-}
 
 .wrapper {
   max-width: 1400px;
