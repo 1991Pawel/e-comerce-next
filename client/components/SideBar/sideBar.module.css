@@ -1,3 +1,19 @@
 .sidebar {
-  border: 1px solid red;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar__nav {
+  margin-top: 2rem;
+}
+
+.sidebar__item {
+  font-weight: 700;
+  text-transform: uppercase;
+  list-style: none;
+}
+.sidebar__item a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 1rem 0;
 }
