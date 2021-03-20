@@ -23,12 +23,12 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-export default function Category({ products }) {
+export default function Category({ products, params }) {
   return (
     <Layout>
       <div className={styles.wrapper}>
         <section className={styles.category}>
-          <SideBar />
+          <SideBar params={params} products={products} />
           <ProductList products={products} />
         </section>
       </div>

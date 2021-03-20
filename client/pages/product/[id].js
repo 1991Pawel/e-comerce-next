@@ -18,11 +18,11 @@ export async function getServerSideProps({ params }) {
   }
 
   return {
-    props: { product }
+    props: { product, params }
   };
 }
 
-const ProductPage = ({ product }) => {
+const ProductPage = ({ product, params }) => {
   if (!product._id) {
     return (
       <Layout>
@@ -39,7 +39,7 @@ const ProductPage = ({ product }) => {
       <Layout>
         <section className={styles.product}>
           <div className={styles.wrapper}>
-            <SideBar />
+            <SideBar product={product} params={params} />
             <div className={styles.product__inner}>
               <div className={styles.product__photo}>
                 <img className={styles.product__img} src={product.imgUrl} alt="" />

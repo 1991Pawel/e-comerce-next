@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import styles from '../SideBar/sideBar.module.css';
 
-export default function SideBar() {
+export default function SideBar({ products, params }) {
   return (
     <aside className={styles.sidebar}>
+      {console.log(products)}
+      <h2 className={styles.sidebar__title}>{params?.category}</h2>
       <nav className={styles.sidebar__nav}>
         <ul className={styles.sidebar__list}>
           <li className={styles.sidebar__item}>
