@@ -1,23 +1,37 @@
 import { RiHeartLine } from 'react-icons/ri';
 import Layout from '../../components/Layout/Layout';
-import { products } from '../../data';
 import styles from '../../styles/pages/product.module.css';
 import SideBar from 'components/SideBar/Sidebar';
-
 import { useRouter } from 'next/router';
 
-const ProductPage = () => {
-  // static products
-  const { query } = useRouter();
-  let id = query.id;
-  const product = products.filter((product) => product.id == id)[0];
+export async function getServerSideProps({ params }) {
+  const res = await fetch(`http://localhost:5000/products/${params.id}`);
 
-  console.log(product);
-
+  const product = await res.json();
   if (!product) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    };
+  }
+
+  return {
+    props: { product }
+  };
+}
+
+const ProductPage = ({ product }) => {
+  if (!product._id) {
     return (
       <Layout>
-        <h1>This product doesn't exist</h1>
+        <section className={styles.product}>
+          <div className={styles.wrapper}>
+            <SideBar />
+            <h1>This product doesn't exist</h1>
+          </div>
+        </section>
       </Layout>
     );
   } else {

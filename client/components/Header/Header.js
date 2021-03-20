@@ -17,12 +17,12 @@ export default function Header() {
         <nav className={styles.nav}>
           <ul className={styles.nav__menu}>
             <li className={styles.nav__item}>
-              <Link href="/man">
+              <Link href="/products/male">
                 <a className={styles.nav__link}>man</a>
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="/woman">
+              <Link href="/products/female">
                 <a className={styles.nav__link}>woman</a>
               </Link>
             </li>
