@@ -10,17 +10,17 @@ export const getProducts = async (req, res) => {
   }
 };
 
-export const getCategory = async ({ params }, res) => {
+export const getCategory = async ({ params, query }, res) => {
   try {
     let products;
-    if (params.item) {
+    if (query.category) {
       products = await ProductItem.find({
-        gender: `${params.category}`,
-        category: `${params.item}`,
+        gender: `${params.gender}`,
+        category: `${query.category}`,
       });
     } else {
       products = await ProductItem.find({
-        gender: `${params.category}`,
+        gender: `${params.gender}`,
       });
     }
 

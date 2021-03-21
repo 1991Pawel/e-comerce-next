@@ -5,18 +5,14 @@ import Layout from 'components/Layout/Layout';
 import SideBar from '../../components/SideBar/Sidebar';
 import ProductList from '../../components/ProductList/ProductList';
 
-export async function getServerSideProps({ params }) {
-  let res;
-  if (params.category[1]) {
-    res = await fetch(
-      `http://localhost:5000/products/category/${params.category[0]}/${params.category[1]}`
-    );
-  } else {
-    res = await fetch(`http://localhost:5000/products/category/${params.category[0]}`);
-    console.log(params.category);
-  }
+export async function getServerSideProps({ params, query }) {
+  const baseUrl = `http://localhost:5000/products/category/${params.page}`;
+  const fetchUrl = query.category ? `${baseUrl}?category=${query.category}` : baseUrl;
+
+  const res = await fetch(fetchUrl);
 
   const products = await res.json();
+
   if (!products) {
     return {
       redirect: {
@@ -27,16 +23,16 @@ export async function getServerSideProps({ params }) {
   }
 
   return {
-    props: { products, params }
+    props: { products, query }
   };
 }
 
-export default function Category({ products, params }) {
+export default function ProductsPage({ products, query: { page } }) {
   return (
     <Layout>
       <div className={styles.wrapper}>
         <section className={styles.category}>
-          <SideBar params={params} />
+          <SideBar categoryName={page} />
           <ProductList products={products} />
         </section>
       </div>

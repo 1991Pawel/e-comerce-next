@@ -2,11 +2,10 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from '../SideBar/sideBar.module.css';
 
-const staticPath = ['t-shirt', 'jeans', 'polo', 'jacket', 'shoes'];
-
-export default function SideBar({ params }) {
+const categoryItems = ['t-shirt', 'jeans', 'polo', 'jacket', 'shoes'];
+export default function SideBar({ categoryName }) {
   const router = useRouter();
-  if (!params) {
+  if (!categoryName) {
     return (
       <aside className={styles.sidebar}>
         <button className={styles.sidebar__btn} onClick={() => router.back()}>
@@ -18,13 +17,17 @@ export default function SideBar({ params }) {
 
   return (
     <aside className={styles.sidebar}>
-      <h2 className={styles.sidebar__title}>{params.category[0]}</h2>
+      <h3>
+        <Link href={`/products/${categoryName}`}>
+          <a className={styles.sidebar__title}>{categoryName}</a>
+        </Link>
+      </h3>
       <nav className={styles.sidebar__nav}>
         <ul className={styles.sidebar__list}>
-          {staticPath.map((path) => (
-            <li key={path} className={styles.sidebar__item}>
-              <Link href={`/products/${params.category[0]}/${path}`}>
-                <a className={styles.sidebar__link}>{path}</a>
+          {categoryItems.map((item) => (
+            <li key={item} className={styles.sidebar__item}>
+              <Link href={`/products/${categoryName}/?category=${item}`}>
+                <a className={styles.sidebar__link}>{item}</a>
               </Link>
             </li>
           ))}

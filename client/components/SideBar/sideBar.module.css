@@ -4,14 +4,13 @@
 
 .sidebar__title {
   font-size: 2rem;
-  text-align: center;
-  text-transform: capitalize;
-  background: rgb(245, 245, 245);
-  padding: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
 }
 
 .sidebar__nav {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .sidebar__btn {

@@ -8,7 +8,7 @@ export async function getServerSideProps({ params }) {
   const res = await fetch(`http://localhost:5000/products/${params.id}`);
 
   const product = await res.json();
-  if (!product) {
+  if (!product._id) {
     return {
       redirect: {
         destination: '/',
@@ -28,7 +28,7 @@ const ProductPage = ({ product, params }) => {
       <Layout>
         <section className={styles.product}>
           <div className={styles.wrapper}>
-            <SideBar />
+            <SideBar categoryName={product.gender} />
             <h1>This product doesn't exist</h1>
           </div>
         </section>
@@ -39,7 +39,7 @@ const ProductPage = ({ product, params }) => {
       <Layout>
         <section className={styles.product}>
           <div className={styles.wrapper}>
-            <SideBar />
+            <SideBar categoryName={product.gender} />
             <div className={styles.product__inner}>
               <div className={styles.product__photo}>
                 <img className={styles.product__img} src={product.imgUrl} alt="" />
@@ -49,10 +49,9 @@ const ProductPage = ({ product, params }) => {
                 <h5 className={styles.title}>{product.title}</h5>
                 <p className={styles.desc}>{product.desc}</p>
                 <span className={styles.price}>$ {product.price}</span>
-
                 <div className={styles.product__btn__group}>
                   <div className={styles.product__select__group}>
-                    <label className={styles.select__label} for="size">
+                    <label className={styles.select__label} htmlFor="size">
                       Choose a size:
                     </label>
                     <select className={styles.select} name="size" id="size" form="">
