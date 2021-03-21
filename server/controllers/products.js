@@ -10,12 +10,20 @@ export const getProducts = async (req, res) => {
   }
 };
 
-export const getCategory = async (req, res) => {
+export const getCategory = async ({ params }, res) => {
   try {
-    const products = await ProductItem.find({
-      gender: `${req.params.category}`,
-    });
-    console.log(req.params.category);
+    let products;
+    if (params.item) {
+      products = await ProductItem.find({
+        gender: `${params.category}`,
+        category: `${params.item}`,
+      });
+    } else {
+      products = await ProductItem.find({
+        gender: `${params.category}`,
+      });
+    }
+
     res.json(products);
   } catch (error) {
     res.status(404).json({ message: error.message });

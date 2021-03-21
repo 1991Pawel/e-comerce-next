@@ -14,8 +14,19 @@
   margin-top: 2rem;
 }
 
+.sidebar__btn {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .sidebar__item {
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   list-style: none;
 }

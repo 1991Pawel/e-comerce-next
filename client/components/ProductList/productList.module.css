@@ -10,6 +10,10 @@
   padding-top: 5rem;
 }
 
+.product:hover .product__img {
+  transform: scale(1.1);
+}
+
 .product {
   width: 250px;
 }
@@ -18,16 +22,22 @@
   flex-direction: column;
   padding: 1rem 0;
   color: rgb(24, 23, 23);
+  transition: 0.3s ease-in-out;
 }
 .product__price {
   margin-top: 1rem;
   align-self: flex-start;
 }
 
-.product__img {
+.product__photo {
+  overflow: hidden;
   height: 350px;
+}
+.product__img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: 0.3s ease-in-out;
 }
 
 .link {

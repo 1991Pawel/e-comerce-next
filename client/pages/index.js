@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/index.module.css';
 import { MdKeyboardArrowRight } from 'react-icons/md';
@@ -13,12 +14,14 @@ export default function Home() {
           <div className={styles.collection__content}>
             <h2 className={styles.collection__title}>
               New <span className={styles.collection__special}>in for</span>
-              <span className={styles.collection__special}>women</span>
+              <span className={styles.collection__special}>woman</span>
             </h2>
-            <button className={styles.collection__btn}>
-              See more
-              <MdKeyboardArrowRight size="25" />
-            </button>
+            <Link href="/products/woman" className={styles.collection__btn}>
+              <a className={styles.collection__btn}>
+                See more
+                <MdKeyboardArrowRight size="25" />
+              </a>
+            </Link>
           </div>
           <div className={styles.collection__photo}>
             <img
@@ -39,10 +42,12 @@ export default function Home() {
                 man
               </span>
             </h2>
-            <button className={styles.collection__btn}>
-              See more
-              <MdKeyboardArrowRight size="25" />
-            </button>
+            <Link href="/products/man" className={styles.collection__btn}>
+              <a className={styles.collection__btn}>
+                See more
+                <MdKeyboardArrowRight size="25" />
+              </a>
+            </Link>
           </div>
         </div>
       </section>

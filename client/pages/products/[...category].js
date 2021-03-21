@@ -6,7 +6,15 @@ import SideBar from '../../components/SideBar/Sidebar';
 import ProductList from '../../components/ProductList/ProductList';
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`http://localhost:5000/products/category/${params.category}`);
+  let res;
+  if (params.category[1]) {
+    res = await fetch(
+      `http://localhost:5000/products/category/${params.category[0]}/${params.category[1]}`
+    );
+  } else {
+    res = await fetch(`http://localhost:5000/products/category/${params.category[0]}`);
+    console.log(params.category);
+  }
 
   const products = await res.json();
   if (!products) {
@@ -28,7 +36,7 @@ export default function Category({ products, params }) {
     <Layout>
       <div className={styles.wrapper}>
         <section className={styles.category}>
-          <SideBar params={params} products={products} />
+          <SideBar params={params} />
           <ProductList products={products} />
         </section>
       </div>

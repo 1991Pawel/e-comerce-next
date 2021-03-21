@@ -3,6 +3,17 @@ import styles from '../Header/header.module.css';
 
 import { RiShoppingBagLine, RiSearchLine, RiHeartLine } from 'react-icons/ri';
 
+const path = [
+  {
+    name: 'man',
+    href: '/products/man'
+  },
+  {
+    name: 'woman',
+    href: '/products/woman'
+  }
+];
+
 export default function Header() {
   return (
     <header className={styles.header}>
@@ -10,22 +21,19 @@ export default function Header() {
         <div>
           <Link href="/">
             <a>
-              <img src="../logo.png" alt="logo" />
+              <img src={'../logo.png'} alt="logo" />
             </a>
           </Link>
         </div>
         <nav className={styles.nav}>
           <ul className={styles.nav__menu}>
-            <li className={styles.nav__item}>
-              <Link href="/products/man">
-                <a className={styles.nav__link}>man</a>
-              </Link>
-            </li>
-            <li className={styles.nav__item}>
-              <Link href="/products/woman">
-                <a className={styles.nav__link}>woman</a>
-              </Link>
-            </li>
+            {path.map(({ name, href }) => (
+              <li key={name} className={styles.nav__item}>
+                <Link href={href}>
+                  <a className={styles.nav__link}>{name}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className={styles.options}>

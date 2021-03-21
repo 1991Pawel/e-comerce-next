@@ -5,7 +5,9 @@ const Product = ({ product: { title, price, imgUrl, desc, _id } }) => (
   <Link href={`/product/${_id}`}>
     <a className={styles.link}>
       <li className={styles.product}>
-        <img className={styles.product__img} src={imgUrl} alt={title} />
+        <div className={styles.product__photo}>
+          <img className={styles.product__img} src={imgUrl} alt={title} />
+        </div>
         <div className={styles.product__content}>
           <h4 className={styles.product__title}>{title}</h4>
           <p className={styles.product__desc}>{desc}</p>
@@ -26,7 +28,7 @@ export default function ProductList({ products }) {
   }
   return (
     <ul className={styles.products}>
-      {products?.map((product) => (
+      {products.map((product) => (
         <Product key={product._id} product={product} />
       ))}
     </ul>

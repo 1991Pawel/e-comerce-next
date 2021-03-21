@@ -39,7 +39,7 @@ const ProductPage = ({ product, params }) => {
       <Layout>
         <section className={styles.product}>
           <div className={styles.wrapper}>
-            <SideBar product={product} params={params} />
+            <SideBar />
             <div className={styles.product__inner}>
               <div className={styles.product__photo}>
                 <img className={styles.product__img} src={product.imgUrl} alt="" />
