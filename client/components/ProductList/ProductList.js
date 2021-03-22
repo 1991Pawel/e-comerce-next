@@ -1,5 +1,7 @@
-import styles from 'components/ProductList/productList.module.css';
 import Link from 'next/link';
+
+import styles from 'components/ProductList/productList.module.css';
+import LoadingSpinner from 'components/LoadingSpinner/LoadingSpinner';
 
 const Product = ({ product: { title, price, imgUrl, desc, _id } }) => (
   <Link href={`/product/${_id}`}>
@@ -18,11 +20,18 @@ const Product = ({ product: { title, price, imgUrl, desc, _id } }) => (
   </Link>
 );
 
-export default function ProductList({ products }) {
+export default function ProductList({ products, loading }) {
+  if (loading) {
+    return (
+      <ul className={styles.products}>
+        <LoadingSpinner />
+      </ul>
+    );
+  }
   if (!products.length) {
     return (
       <ul className={styles.products}>
-        <h2>no product</h2>
+        <h2>no products found</h2>
       </ul>
     );
   }
