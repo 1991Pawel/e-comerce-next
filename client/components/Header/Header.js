@@ -44,9 +44,16 @@ export default function Header() {
           <button className={styles.option}>
             <RiSearchLine size="28" />
           </button>
-          <button className={styles.option}>
+          <button className={`${styles.option} ${styles.cartDropDown}`}>
             <RiShoppingBagLine size="28" />
             <span className={styles.option__count}>5</span>
+            <ul className={styles.cartDropDown__list}>
+              <li className={styles.cartDropDown__item}>item</li>
+              <li className={styles.cartDropDown__item}>item</li>
+              <li className={styles.cartDropDown__item}>item</li>
+              <li className={styles.cartDropDown__item}>item</li>
+              <li className={styles.cartDropDown__item}>item</li>
+            </ul>
           </button>
           <button className={styles.button}>Login</button>
         </div>

@@ -23,6 +23,8 @@ export async function getServerSideProps({ params }) {
 }
 
 const ProductPage = ({ product, params }) => {
+  const size = JSON.parse(product.size);
+
   if (!product._id) {
     return (
       <Layout>
@@ -55,21 +57,11 @@ const ProductPage = ({ product, params }) => {
                       Choose a size:
                     </label>
                     <select className={styles.select} name="size" id="size" form="">
-                      <option className={styles.option} value="xs">
-                        xs
-                      </option>
-                      <option className={styles.option} value="s">
-                        s
-                      </option>
-                      <option className={styles.option} value="m">
-                        m
-                      </option>
-                      <option className={styles.option} value="l">
-                        l
-                      </option>
-                      <option className={styles.option} value="xl">
-                        xl
-                      </option>
+                      {size.map((s) => (
+                        <option className={styles.option} value={s}>
+                          {s}
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <div className={styles.product__add__group}>

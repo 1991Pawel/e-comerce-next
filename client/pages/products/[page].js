@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../../styles/pages/category.module.css';
 
+import { useState, useEffect } from 'react';
 import Layout from 'components/Layout/Layout';
 import SideBar from '../../components/SideBar/Sidebar';
 import ProductList from '../../components/ProductList/ProductList';

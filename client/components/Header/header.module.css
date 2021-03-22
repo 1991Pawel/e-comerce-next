@@ -43,6 +43,42 @@
   font-size: 1.4rem;
 }
 
+.cartDropDown {
+  position: relative;
+  border: 2px solid #fff;
+}
+
+.cartDropDown:hover {
+  border: 2px solid rgb(0, 0, 0);
+}
+.cartDropDown:hover > .cartDropDown__list {
+  display: block;
+}
+
+.cartDropDown__list {
+  position: absolute;
+  right: -2px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(15, 15, 15);
+  width: 230px;
+  height: 300px;
+  display: none;
+}
+.cartDropDown__list::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  background: rgb(255, 255, 255);
+  height: 2px;
+  width: 28px;
+}
+
+.cartDropDown__item {
+  list-style: none;
+}
+
 .button {
   min-width: 12rem;
   height: 4rem;
