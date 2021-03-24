@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useCartContext } from '../context/cartContext';
 import { VscTrash } from 'react-icons/vsc';
 import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/cart.module.css';

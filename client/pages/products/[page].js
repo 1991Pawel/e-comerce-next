@@ -4,6 +4,7 @@ import Layout from 'components/Layout/Layout';
 import SideBar from '../../components/SideBar/Sidebar';
 import ProductList from '../../components/ProductList/ProductList';
 import { useLoadingState } from '../../utlis/useLoadingState';
+
 export async function getServerSideProps({ params, query }) {
   const baseUrl = `http://localhost:5000/products/category/${params.page}`;
   const fetchUrl = query.category ? `${baseUrl}?category=${query.category}` : baseUrl;
@@ -28,6 +29,7 @@ export async function getServerSideProps({ params, query }) {
 
 export default function ProductsPage({ products, query: { page } }) {
   const { loading } = useLoadingState();
+
   return (
     <Layout>
       <div className={styles.wrapper}>
