@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 import styles from 'components/ProductList/productList.module.css';
 import LoadingSpinner from 'components/LoadingSpinner/LoadingSpinner';
 
