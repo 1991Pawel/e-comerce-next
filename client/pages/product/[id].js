@@ -30,9 +30,9 @@ const ProductPage = ({ product, params }) => {
   const productSize = JSON.parse(product.size);
   const { addItemToCart } = useCartContext();
 
-  const submitHandler = (e, product) => {
+  const submitHandler = (e) => {
     e.preventDefault();
-    if (size && prdocut) {
+    if (size) {
       const selectedProduct = {
         ...product,
         size
@@ -74,7 +74,7 @@ const ProductPage = ({ product, params }) => {
                 <h5 className={styles.title}>{product.title}</h5>
                 <p className={styles.desc}>{product.desc}</p>
                 <span className={styles.price}>$ {product.price}</span>
-                <form onSubmit={(e) => submitHandler(e, product)}>
+                <form onSubmit={submitHandler}>
                   <div className={styles.product__btn__group}>
                     <div className={styles.product__select__group}>
                       <label className={styles.select__label} htmlFor="size">

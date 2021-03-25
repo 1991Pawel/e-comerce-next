@@ -6,7 +6,7 @@ function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
   const addItemToCart = (product) => {
-    console.log(product);
+    setCartItems([...cartItems, product]);
   };
 
   const removeItemFromCart = (id) => {
