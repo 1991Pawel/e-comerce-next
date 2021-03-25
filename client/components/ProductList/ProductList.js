@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import styles from 'components/ProductList/productList.module.css';
 import LoadingSpinner from 'components/LoadingSpinner/LoadingSpinner';
-import { useCartContext } from '../../context/cartContext';
 
 export default function ProductList({ products, loading }) {
-  const { removeItemFromCart, addItemToCart } = useCartContext();
   if (loading) {
     return (
       <ul className={styles.products}>
