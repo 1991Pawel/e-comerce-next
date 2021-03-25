@@ -1,0 +1,21 @@
+.wrapper {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  border: 2px solid rgb(252, 252, 252);
+}
+
+.option__count {
+  position: absolute;
+  bottom: 50%;
+  right: -0.5rem;
+  background: rgb(223, 165, 40);
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}

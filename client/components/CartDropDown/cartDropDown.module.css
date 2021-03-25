@@ -1,0 +1,119 @@
+.options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cart__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.cart__btn:hover {
+  border: 20px solid #000;
+}
+.cartDropDown {
+  position: relative;
+  z-index: 2;
+}
+.cartDropDown:hover .cart__btn {
+  border: 2px solid #000;
+}
+
+.cartDropDown:hover > .cartDropDown__wrapper {
+  display: block;
+}
+
+.cartDropDown__wrapper {
+  position: absolute;
+  right: 0;
+  top: 97%;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(15, 15, 15);
+  width: 230px;
+  display: none;
+}
+
+.cartDropDown__wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  background: rgb(255, 255, 255);
+  height: 2px;
+  width: 32px;
+}
+
+.cartDropDown__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 1rem;
+  text-transform: uppercase;
+}
+
+.cartDropDown__title {
+  font-weight: 700;
+}
+.cartDropDown__price {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.cartDropDown__size,
+.cartDropDown__quantity {
+  font-size: 1.2rem;
+  color: rgb(104, 104, 104);
+}
+
+.cartDropDown__list {
+  overflow-y: scroll;
+  max-height: 340px;
+  height: 200px;
+}
+.cartDropDown__list,
+.cartDropDown__footer {
+  padding: 0.5rem;
+}
+
+.cartDropDown__item {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: 100px;
+  border-bottom: 1px solid rgb(228, 227, 227);
+  padding: 1rem 0.5rem;
+}
+
+.cartDropDown__img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.cartDropDown__link {
+  display: block;
+  padding: 1rem;
+  background: #000;
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.cartDropDown__footer {
+  display: flex;
+}
+
+.button {
+  min-width: 12rem;
+  height: 4rem;
+  background: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+}
