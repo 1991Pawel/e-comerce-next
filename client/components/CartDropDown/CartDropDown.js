@@ -11,13 +11,13 @@ export default function CartDropDown({ products }) {
       </button>
       <div className={styles.cartDropDown__wrapper}>
         <ul className={styles.cartDropDown__list}>
-          {products.map((product) => (
-            <li key={product._id} className={styles.cartDropDown__item}>
+          {products.map((product, _idx) => (
+            <li key={_idx} className={styles.cartDropDown__item}>
               <img className={styles.cartDropDown__img} src={product.imgUrl} alt={product.desc} />
               <div className={styles.cartDropDown__content}>
                 <span className={styles.cartDropDown__title}>{product.category}</span>
                 <span className={styles.cartDropDown__size}>size: {product.size}</span>
-                <span className={styles.cartDropDown__quantity}>quantity: 2</span>
+                <span className={styles.cartDropDown__quantity}>quantity: {product.quantity}</span>
                 <span className={styles.cartDropDown__price}>price: {product.price}</span>
               </div>
             </li>

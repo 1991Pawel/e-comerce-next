@@ -5,7 +5,7 @@ import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/cart.module.css';
 
 export default function Cart() {
-  const { cartItems } = useCartContext();
+  const { cartItems, totalPrice } = useCartContext();
 
   return (
     <Layout>
@@ -28,7 +28,7 @@ export default function Cart() {
                 </div>
                 <div className={styles.cart__quantity}>
                   <button className={styles.cart__quantity__btn}>-</button>
-                  <span className={styles.cart__quantity__number}>5</span>
+                  <span className={styles.cart__quantity__number}>{product.quantity}</span>
                   <button className={styles.cart__quantity__btn}>+</button>
                 </div>
                 <div className={styles.cart__price}>
@@ -43,7 +43,7 @@ export default function Cart() {
           <div className={styles.cart__details}>
             <ul className={styles.cart__list}>
               <li className={styles.cart__list__item}>
-                Total: <span className={styles.cart__list__subitem}>115$</span>
+                Total: <span className={styles.cart__list__subitem}>$ {totalPrice()}</span>
               </li>
               <li className={styles.cart__list__item}>
                 Delivery: <span className={styles.cart__list__subitem}>free delivery</span>

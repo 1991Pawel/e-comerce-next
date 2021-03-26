@@ -3,7 +3,6 @@ import styles from 'components/Header/header.module.css';
 import CartDropDown from 'components/CartDropDown/CartDropDown';
 import { useCartContext } from '../../context/CartContext';
 import IconButton from 'components/IconButton/IconButton';
-import { products } from 'data';
 
 const path = [
   {

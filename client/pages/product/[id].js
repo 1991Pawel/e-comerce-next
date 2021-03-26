@@ -5,7 +5,6 @@ import styles from '../../styles/pages/product.module.css';
 import SideBar from 'components/SideBar/Sidebar';
 import { useRouter } from 'next/router';
 import { useCartContext } from '../../context/CartContext';
-import { products } from 'data';
 
 export async function getServerSideProps({ params }) {
   const res = await fetch(`http://localhost:5000/products/${params.id}`);
@@ -87,7 +86,7 @@ const ProductPage = ({ product, params }) => {
                         name="size"
                         id="size">
                         {!size ? (
-                          <option selected value="" className={styles.option}>
+                          <option selected value="size" className={styles.option}>
                             {!size && 'size'}
                           </option>
                         ) : null}
