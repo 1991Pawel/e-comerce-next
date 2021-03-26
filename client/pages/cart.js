@@ -5,7 +5,7 @@ import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/cart.module.css';
 
 export default function Cart() {
-  const { cartItems, totalPrice, decrementItemFromCart } = useCartContext();
+  const { cartItems, totalPrice, decrementItemFromCart, incrementItemFromCart } = useCartContext();
 
   return (
     <Layout>
@@ -33,7 +33,11 @@ export default function Cart() {
                     -
                   </button>
                   <span className={styles.cart__quantity__number}>{product.quantity}</span>
-                  <button className={styles.cart__quantity__btn}>+</button>
+                  <button
+                    onClick={() => incrementItemFromCart(product._id, product.size)}
+                    className={styles.cart__quantity__btn}>
+                    +
+                  </button>
                 </div>
                 <div className={styles.cart__price}>
                   <span>$ {(product.price * product.quantity).toFixed(2)}</span>

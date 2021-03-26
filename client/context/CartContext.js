@@ -45,6 +45,20 @@ function CartProvider({ children }) {
     setCartItems(itemsInCart);
   };
 
+  const incrementItemFromCart = (id, size) => {
+    const itemsInCart = cartItems.map((cartItem) => {
+      if (cartItem._id === id && cartItem.size === size) {
+        return {
+          ...cartItem,
+          quantity: cartItem.quantity + 1
+        };
+      }
+      return cartItem;
+    });
+
+    setCartItems(itemsInCart);
+  };
+
   const removeItemFromCart = (id) => {
     console.log(id);
   };
@@ -59,7 +73,8 @@ function CartProvider({ children }) {
         removeItemFromCart,
         cartItems,
         totalPrice,
-        decrementItemFromCart
+        decrementItemFromCart,
+        incrementItemFromCart
       }}>
       {children}
     </CartContext.Provider>
