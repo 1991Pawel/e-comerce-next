@@ -25,7 +25,7 @@ export async function getServerSideProps({ params }) {
 }
 
 const ProductPage = ({ product, params }) => {
-  const [size, setSize] = useState('');
+  const [size, setSize] = useState('default');
   const productSize = JSON.parse(product.size);
   const { addItemToCart } = useCartContext();
 
@@ -38,7 +38,7 @@ const ProductPage = ({ product, params }) => {
       };
       addItemToCart(selectedProduct);
       console.log('product add');
-      setSize('');
+      setSize('default');
     }
   };
 
@@ -85,11 +85,6 @@ const ProductPage = ({ product, params }) => {
                         className={styles.select}
                         name="size"
                         id="size">
-                        {!size ? (
-                          <option selected value="size" className={styles.option}>
-                            {!size && 'size'}
-                          </option>
-                        ) : null}
                         {productSize.map((s) => (
                           <option key={s} className={styles.option} value={s}>
                             {s}
