@@ -59,8 +59,11 @@ function CartProvider({ children }) {
     setCartItems(itemsInCart);
   };
 
-  const removeItemFromCart = (id) => {
-    console.log(id);
+  const removeItemFromCart = (id, size) => {
+    const itemsInCart = cartItems.filter((cartItem) => {
+      return !(cartItem._id === id && cartItem.size === size);
+    });
+    setCartItems(itemsInCart);
   };
 
   const totalPrice = () =>

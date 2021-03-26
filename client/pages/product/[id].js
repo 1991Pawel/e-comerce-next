@@ -25,7 +25,7 @@ export async function getServerSideProps({ params }) {
 }
 
 const ProductPage = ({ product, params }) => {
-  const [size, setSize] = useState('default');
+  const [size, setSize] = useState('');
   const productSize = JSON.parse(product.size);
   const { addItemToCart } = useCartContext();
 
@@ -38,7 +38,6 @@ const ProductPage = ({ product, params }) => {
       };
       addItemToCart(selectedProduct);
       console.log('product add');
-      setSize('default');
     }
   };
 
@@ -49,7 +48,6 @@ const ProductPage = ({ product, params }) => {
   if (!product._id) {
     return (
       <Layout>
-        {console.log(value)}
         <section className={styles.product}>
           <div className={styles.wrapper}>
             <SideBar categoryName={product.gender} />
