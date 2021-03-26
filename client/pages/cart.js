@@ -5,7 +5,7 @@ import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/cart.module.css';
 
 export default function Cart() {
-  const { cartItems, totalPrice } = useCartContext();
+  const { cartItems, totalPrice, decrementItemFromCart } = useCartContext();
 
   return (
     <Layout>
@@ -14,8 +14,8 @@ export default function Cart() {
         <h2 className={styles.title}>Cart</h2>
         <div className={styles.cart}>
           <ul className={styles.cart__products}>
-            {cartItems?.map((product) => (
-              <li key={product._id} className={styles.cart__product}>
+            {cartItems?.map((product, idx) => (
+              <li key={idx} className={styles.cart__product}>
                 <div className={styles.cart__content}>
                   <div className={styles.cart__photo}>
                     <img src={product.imgUrl} alt={product.desc} />
@@ -27,12 +27,16 @@ export default function Cart() {
                   </div>
                 </div>
                 <div className={styles.cart__quantity}>
-                  <button className={styles.cart__quantity__btn}>-</button>
+                  <button
+                    onClick={() => decrementItemFromCart(product._id, product.size)}
+                    className={styles.cart__quantity__btn}>
+                    -
+                  </button>
                   <span className={styles.cart__quantity__number}>{product.quantity}</span>
                   <button className={styles.cart__quantity__btn}>+</button>
                 </div>
                 <div className={styles.cart__price}>
-                  <span>$ {product.price}</span>
+                  <span>$ {(product.price * product.quantity).toFixed(2)}</span>
                 </div>
                 <button className={styles.cart__product__btn}>
                   <VscTrash />
