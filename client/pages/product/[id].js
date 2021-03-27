@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import { useCartContext } from '../../context/CartContext';
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`http://localhost:5000/products/${params.id}`);
+  const res = await fetch(`${process.env.HOST}/products/${params.id}`);
 
   const product = await res.json();
   if (!product._id) {
