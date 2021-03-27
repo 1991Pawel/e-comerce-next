@@ -25,19 +25,19 @@ export async function getServerSideProps({ params }) {
 }
 
 const ProductPage = ({ product, params }) => {
-  const [size, setSize] = useState('');
+  const [size, setSize] = useState('default');
   const productSize = JSON.parse(product.size);
   const { addItemToCart } = useCartContext();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (size) {
+    if (size !== 'default') {
       const selectedProduct = {
         ...product,
         size
       };
       addItemToCart(selectedProduct);
-      console.log('product add');
+      setSize('default');
     }
   };
 
@@ -60,6 +60,7 @@ const ProductPage = ({ product, params }) => {
     return (
       <Layout>
         <section className={styles.product}>
+          <p>{JSON.stringify(size)}</p>
           <div className={styles.wrapper}>
             <SideBar categoryName={product.gender} />
             <div className={styles.product__inner}>
@@ -82,7 +83,10 @@ const ProductPage = ({ product, params }) => {
                         onChange={handleChange}
                         className={styles.select}
                         name="size"
+                        defaultValue={'default'}
+                        value={size}
                         id="size">
+                        {size === 'default' ? <option value="default">select size</option> : null}
                         {productSize.map((s) => (
                           <option key={s} className={styles.option} value={s}>
                             {s}

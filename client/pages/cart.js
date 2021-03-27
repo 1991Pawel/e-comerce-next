@@ -16,7 +16,6 @@ export default function Cart() {
   return (
     <Layout>
       <div className={styles.wrapper}>
-        {console.log(cartItems)}
         <h2 className={styles.title}>Cart</h2>
         <div className={styles.cart}>
           <ul className={styles.cart__products}>
