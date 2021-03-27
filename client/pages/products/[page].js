@@ -6,7 +6,7 @@ import ProductList from '../../components/ProductList/ProductList';
 import { useLoadingState } from '../../utlis/useLoadingState';
 
 export async function getServerSideProps({ params, query }) {
-  const baseUrl = `${process.env.HOST}/products/category/${params.page}`;
+  const baseUrl = `${process.env.BASE_URL}/products/category/${params.page}`;
   const fetchUrl = query.category ? `${baseUrl}?category=${query.category}` : baseUrl;
 
   const res = await fetch(fetchUrl);
