@@ -80,12 +80,12 @@ const ProductPage = ({ product, params }) => {
                         Choose a size:
                       </label>
                       <select
-                        required
                         onChange={handleChange}
                         className={styles.select}
                         name="size"
                         value={size}
-                        id="size">
+                        id="size"
+                        required>
                         {size === defaultOption ? (
                           <option value={defaultOption}>select size</option>
                         ) : null}
@@ -97,7 +97,10 @@ const ProductPage = ({ product, params }) => {
                       </select>
                     </div>
                     <div className={styles.product__add__group}>
-                      <button type="submit" className={styles.product__btn}>
+                      <button
+                        disabled={size === defaultOption}
+                        type="submit"
+                        className={styles.product__btn}>
                         add to cart
                       </button>
                       <button type="button" className={styles.product__btn__favorite}>
