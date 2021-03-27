@@ -61,7 +61,6 @@ const ProductPage = ({ product, params }) => {
     return (
       <Layout>
         <section className={styles.product}>
-          <p>{JSON.stringify(size)}</p>
           <div className={styles.wrapper}>
             <SideBar categoryName={product.gender} />
             <div className={styles.product__inner}>
