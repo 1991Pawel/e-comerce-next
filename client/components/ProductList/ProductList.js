@@ -19,7 +19,6 @@ export default function ProductList({ products, loading }) {
   }
   return (
     <ul className={styles.products}>
-      {console.log(products)}
       {products.map((product) => (
         <Product key={product._id} product={product} />
       ))}
