@@ -27,7 +27,14 @@ export default function SideBar({ categoryName }) {
           {categoryItems.map((item) => (
             <li key={item} className={styles.sidebar__item}>
               <Link href={`/products/${categoryName}/?category=${item}`}>
-                <a className={styles.sidebar__link}>{item}</a>
+                <a
+                  className={
+                    item === router.query.category
+                      ? `${styles.sidebar__link} ${styles.sidebar__link__active}`
+                      : `${styles.sidebar__link}`
+                  }>
+                  {item}
+                </a>
               </Link>
             </li>
           ))}

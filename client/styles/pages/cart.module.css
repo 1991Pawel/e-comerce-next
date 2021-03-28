@@ -23,6 +23,7 @@
 
 .title {
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .cart {
@@ -79,15 +80,19 @@
 .cart__desc {
   padding: 1rem;
 }
-.desc__title {
+.desc__category {
   font-size: var(--fs--regular);
   font-weight: var(--font-bold);
   text-transform: uppercase;
 }
-.desc__subtitle {
+.desc__brand,
+.desc__size {
   margin-top: 1rem;
   color: var(--text-dark-gray-color);
   font-weight: var(--font-regular);
+}
+.desc__size {
+  text-transform: capitalize;
 }
 
 .cart__photo {

@@ -19,15 +19,15 @@
   --danger-color: #a53434;
 
   /* FONT SIZE */
-  /* scale for 1.2 */
 
-  --fs-small: 1rem;
+  --fs-small: 1.3rem;
   --fs-small-1: 1.4rem;
   --fs-regular: 1.6rem;
   --fs-regular-2: 2rem;
   --fs-big: 3rem;
   --fs-extra: 8rem;
   /* FONT WEIGHT*/
+
   --font-bold: 700;
   --font-regular: 400;
 
@@ -41,7 +41,7 @@ html {
 }
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.6rem;
+  font-size: var(--fs-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -40,9 +40,9 @@ export default function Cart() {
                     <img src={product.imgUrl} alt={product.desc} />
                   </div>
                   <div className={styles.cart__desc}>
-                    <h5 className={styles.desc__title}>{product.category}</h5>
-                    <h5 className={styles.desc__subtitle}>{product.brand}</h5>
-                    <h5 className={styles.desc__subtitle}>size : {product.size}</h5>
+                    <h5 className={styles.desc__category}>{product.category}</h5>
+                    <h5 className={styles.desc__brand}>{product.brand}</h5>
+                    <h5 className={styles.desc__size}>Size: {product.size}</h5>
                   </div>
                 </div>
                 <div className={styles.cart__quantity}>
