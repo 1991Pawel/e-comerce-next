@@ -28,7 +28,7 @@
 }
 
 .product {
-  max-width: 1400px;
+  max-width: var(--container-width);
   padding: 0 1rem;
   margin: 0 auto;
 }

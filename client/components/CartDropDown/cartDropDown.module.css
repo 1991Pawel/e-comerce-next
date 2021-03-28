@@ -63,17 +63,17 @@
 }
 
 .cartDropDown__title {
-  font-weight: 700;
+  font-weight: var(--font-bold);
 }
 .cartDropDown__price {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: var(--fs-small-1);
+  font-weight: var(--font-bold);
 }
 
 .cartDropDown__size,
 .cartDropDown__quantity {
   font-size: 1.2rem;
-  color: rgb(104, 104, 104);
+  color: var(--text-dark-gray-color);
 }
 
 .cartDropDown__list {
@@ -104,10 +104,10 @@
 .cartDropDown__link {
   display: block;
   padding: 1rem;
-  background: #000;
+  background: var(--bg-dark-color);
   text-decoration: none;
   width: 100%;
-  color: #fff;
+  color: var(--text-light-color);
   text-align: center;
 }
 .cartDropDown__footer {
@@ -117,9 +117,9 @@
 .button {
   min-width: 12rem;
   height: 4rem;
-  background: rgb(0, 0, 0);
+  background: var(--bg-dark-color);
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-light-color);
   text-transform: uppercase;
 }

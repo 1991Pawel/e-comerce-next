@@ -1,5 +1,5 @@
 .header {
-  max-width: 1400px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -31,10 +31,10 @@
 .button {
   min-width: 12rem;
   height: 4rem;
-  background: rgb(0, 0, 0);
+  background: var(--bg-dark-color);
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-light-color);
   text-transform: uppercase;
 }
 
@@ -44,9 +44,9 @@
 
 .nav__link {
   margin-right: 2rem;
-  font-size: 1.6rem;
+  font-size: var(--fs-regular);
   text-decoration: none;
-  color: #000;
+  color: var(--bg-dark-color);
   text-transform: uppercase;
 }
 
