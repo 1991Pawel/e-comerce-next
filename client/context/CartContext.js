@@ -1,9 +1,15 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import { useLocalStorage } from '../utlis/useLocalStorage';
 
 const CartContext = createContext();
 
 function CartProvider({ children }) {
+  const [storedValue, setValue] = useLocalStorage('products', []);
   const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    setCartItems(storedValue);
+  }, [storedValue]);
 
   const addItemToCart = (product) => {
     const itemAllreadyInCart = cartItems.find(
@@ -19,13 +25,13 @@ function CartProvider({ children }) {
         }
         return cartItem;
       });
-      setCartItems(cartProduct);
+      setValue(cartProduct);
     } else {
       const newProduct = {
         ...product,
         quantity: 1
       };
-      setCartItems([...cartItems, newProduct]);
+      setValue([...cartItems, newProduct]);
     }
   };
 
@@ -42,7 +48,7 @@ function CartProvider({ children }) {
       return cartItem;
     });
 
-    setCartItems(itemsInCart);
+    setValue(itemsInCart);
   };
 
   const incrementItemFromCart = (id, size) => {
@@ -56,14 +62,14 @@ function CartProvider({ children }) {
       return cartItem;
     });
 
-    setCartItems(itemsInCart);
+    setValue(itemsInCart);
   };
 
   const removeItemFromCart = (id, size) => {
     const itemsInCart = cartItems.filter((cartItem) => {
       return !(cartItem._id === id && cartItem.size === size);
     });
-    setCartItems(itemsInCart);
+    setValue(itemsInCart);
   };
 
   const totalPrice = () =>

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Router from 'next/router';
 
 export const useLoadingState = () => {
-  const [loading, setLoading] = React.useState(false);
-  React.useEffect(() => {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
     const start = () => {
       console.log('start');
       setLoading(true);
