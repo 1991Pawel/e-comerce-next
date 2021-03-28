@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__inner}>
-        <div>
+        <div className={styles.logo}>
           <Link href="/">
             <a>
               <img src={'../logo.png'} alt="logo" />

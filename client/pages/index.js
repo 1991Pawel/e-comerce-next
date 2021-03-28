@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
+
 import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/index.module.css';
 import { MdKeyboardArrowRight } from 'react-icons/md';
@@ -26,14 +28,14 @@ export default function Home() {
           <div className={styles.collection__photo}>
             <img
               className={styles.collection__img}
-              src="./images/woman.jpg"
-              alt="woman collection"
+              src="./images/woman.webp"
+              alt="man collection"
             />
           </div>
         </div>
         <div className={styles.collection}>
           <div>
-            <img className={styles.collection__img} src="./images/man.jpg" alt="man collection" />
+            <img className={styles.collection__img} src="./images/man.webp" alt="man collection" />
           </div>
           <div className={styles.collection__content}>
             <h2 className={styles.collection__title}>

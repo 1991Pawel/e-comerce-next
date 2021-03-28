@@ -11,6 +11,19 @@
   padding: 0 1rem;
 }
 
+.logo {
+  height: 80px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
 .options {
   display: flex;
   justify-content: space-around;
