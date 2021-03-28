@@ -24,7 +24,7 @@
   justify-content: space-between;
   margin: 0 2rem;
   padding: 2rem;
-  border-left: 3px solid rgb(0, 0, 0);
+  border-left: 3px solid var(--bg-dark-color);
 }
 
 .product {
@@ -34,19 +34,16 @@
 }
 
 .brand {
-  color: rgb(167, 167, 167);
+  color: var(--text-drak-gray-color);
 }
 
-.title {
-  font-size: 3.2rem;
-}
 .desc {
-  font-size: 1.6rem;
+  font-size: var(--fs-regular);
   margin: 3rem 0;
 }
 
 .price {
-  font-size: 3.2rem;
+  font-size: var(--fs-big);
 }
 
 .product__btn__group {
@@ -55,14 +52,14 @@
 }
 .product__btn {
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: var(--fs-small-1);
   background: transparent;
   border: none;
   cursor: pointer;
   height: 4rem;
   width: 100%;
-  background: #000;
-  color: #fff;
+  background: var(--bg-dark-color);
+  color: var(--text-light-color);
 }
 .product__btn:disabled {
   cursor: not-allowed;
@@ -70,10 +67,11 @@
 
 .product__btn__favorite {
   width: 5rem;
-  background: #fff;
+  background: transparent;
   margin-left: 1rem;
   cursor: pointer;
-  border: 1px solid #000;
+  border: 1px solid var(--bg-dark-color);
+  color: var(--bg-dark-color);
 
   display: flex;
   justify-content: center;
@@ -89,13 +87,14 @@
 }
 
 .select__label {
-  font-size: 1.4rem;
+  font-size: var(--fs-small-1);
+  text-transform: uppercase;
 }
 .select {
   margin-top: 0.5rem;
   height: 4rem;
   width: 100%;
-  font-size: 1.4rem;
+  font-size: var(--fs-small-1);
   text-transform: uppercase;
   padding: 1rem;
   cursor: pointer;

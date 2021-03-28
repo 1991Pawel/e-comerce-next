@@ -1,12 +1,12 @@
 .wrapper {
-  max-width: 1400px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 1rem;
   min-height: 70vh;
 }
 
 .empty__text {
-  font-size: 2rem;
+  font-size: var(--fs-regular-2);
   display: block;
   margin-bottom: 5rem;
 }
@@ -38,32 +38,33 @@
   align-self: start;
   max-width: 350px;
   padding: 2rem;
-  border: 1px solid #000;
+  border: 1px solid var(--bg-dark-color);
 }
 
 .cart__list {
-  border-bottom: solid 1px #ccc;
+  margin-bottom: 2rem;
+  border-bottom: solid 1px var(--bg-gray-color);
 }
 
 .cart__list__item {
   display: flex;
   justify-content: space-between;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: var(--fs-regualr-2);
+  font-weight: var(--font-bold);
   margin-bottom: 1rem;
 }
 
 .cart__list__subitem {
   display: block;
-  font-weight: 400;
-  font-size: 1.6rem;
+  font-weight: var(--font-regular);
+  font-size: var(--fs--regular);
 }
 
 .cart__btn {
   height: 4rem;
   width: 100%;
-  background: #000;
-  color: #fff;
+  background: var(--bg-dark-color);
+  color: var(--text-light-color);
   display: block;
   display: flex;
   justify-content: center;
@@ -79,14 +80,14 @@
   padding: 1rem;
 }
 .desc__title {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: var(--fs--regular);
+  font-weight: var(--font-bold);
   text-transform: uppercase;
 }
 .desc__subtitle {
   margin-top: 1rem;
-  color: rgb(102, 102, 102);
-  font-weight: 400;
+  color: var(--text-dark-gray-color);
+  font-weight: var(--font-regular);
 }
 
 .cart__photo {
@@ -118,10 +119,10 @@
 .cart__quantity__btn {
   width: 2rem;
   height: 2rem;
-  background: #000;
+  background: var(--bg-dark-color);
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-light-color);
 }
 
 .cart__product {
@@ -129,7 +130,7 @@
   grid-template-columns: 1fr 1fr repeat(2, minmax(max-content, 50px));
   align-items: center;
   margin-bottom: 1rem;
-  background: #f5f5f7;
+  background: var(--bg-gray-color);
 }
 
 .cart__product__btn {
@@ -143,7 +144,7 @@
   background: transparent;
 }
 .cart__product__btn svg {
-  color: rgb(206, 46, 46);
+  color: var(--danger-color);
   height: 2rem;
   width: 2rem;
 }

@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: 1400px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -69,17 +69,16 @@
 }
 
 .collection__title {
-  font-size: 8rem;
+  font-size: var(--fs-extra);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   width: 300px;
 }
 
 .collection__btn {
   margin-top: 3rem;
   text-transform: uppercase;
-  color: #000;
-  font-size: 1.3rem;
+  font-size: var(--fs-small-1);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -89,8 +88,8 @@
   justify-content: center;
   height: 4rem;
   width: 14rem;
-  background: #000;
-  color: #fff;
+  background: var(--bg-dark-color);
+  color: var(--text-light-color);
   text-decoration: none;
 }
 
@@ -99,7 +98,7 @@
 }
 
 .feature {
-  background: rgb(12, 12, 12);
+  background: var(--bg-dark-color);
 }
 
 .feature__wrapper {
@@ -108,29 +107,29 @@
   padding: 3rem 1rem;
   align-items: center;
 
-  max-width: 1400px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
 .feature__title {
-  font-size: 1.4rem;
+  font-size: var(--fs-small-1);
   margin-bottom: 1rem;
-  font-weight: 400;
+  font-weight: var(--font-regular);
   text-transform: uppercase;
 }
 
 .feature__box {
-  color: #fff;
+  color: var(--text-light-color);
   text-align: center;
 }
 
 .feature__form {
-  color: #fff;
+  color: var(--text-light-color);
 }
 
 .feature__box p {
-  color: rgb(126, 126, 126);
-  font-size: 1.4rem;
+  color: var(--text-dark-gray-color);
+  font-size: var(--fs-small);
 }
 
 .form {
@@ -142,10 +141,10 @@
   border: none;
   height: 100%;
   width: 5rem;
-  background: rgb(82, 82, 82);
-  color: #fff;
+  background: var(--text-dark-gray-color);
+  color: var(--text-light-color);
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: var(--fs-small);
   cursor: pointer;
 }
 

@@ -69,7 +69,6 @@ const ProductPage = ({ product, params }) => {
               </div>
               <div className={styles.product__content}>
                 <span className={styles.brand}>{product.brand}</span>
-                <h5 className={styles.title}>{product.title}</h5>
                 <p className={styles.desc}>{product.desc}</p>
                 <span className={styles.price}>$ {product.price}</span>
                 <form onSubmit={submitHandler}>
