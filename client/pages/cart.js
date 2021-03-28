@@ -3,6 +3,7 @@ import { useCartContext } from '../context/CartContext';
 import { VscTrash } from 'react-icons/vsc';
 import Layout from 'components/Layout/Layout';
 import styles from '../styles/pages/cart.module.css';
+import { MdAddShoppingCart } from 'react-icons/md';
 
 export default function Cart() {
   const {
@@ -12,6 +13,19 @@ export default function Cart() {
     removeItemFromCart,
     incrementItemFromCart
   } = useCartContext();
+
+  if (!cartItems.length) {
+    return (
+      <Layout>
+        <div className={styles.wrapper}>
+          <div className={styles.empty__info}>
+            <h3 className={styles.empty__text}>NO ITEMS IN CART</h3>
+            <MdAddShoppingCart size={100} />
+          </div>
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>

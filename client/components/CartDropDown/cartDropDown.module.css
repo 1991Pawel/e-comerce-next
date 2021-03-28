@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.cartDropDown__info {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 5rem;
+}
+
 .cart__btn {
   display: flex;
   justify-content: center;

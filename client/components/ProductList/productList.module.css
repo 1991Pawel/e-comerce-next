@@ -11,6 +11,13 @@
   padding-top: 5rem;
 }
 
+.products__info {
+  margin-top: 5rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .product:hover .product__img {
   transform: scale(1.1);
 }

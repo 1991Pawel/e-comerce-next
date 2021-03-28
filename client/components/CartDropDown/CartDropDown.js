@@ -11,6 +11,9 @@ export default function CartDropDown({ products }) {
       </button>
       <div className={styles.cartDropDown__wrapper}>
         <ul className={styles.cartDropDown__list}>
+          {!products.length ? (
+            <p className={styles.cartDropDown__info}>Your cart is empty</p>
+          ) : null}
           {products.map((product, _idx) => (
             <li key={_idx} className={styles.cartDropDown__item}>
               <img className={styles.cartDropDown__img} src={product.imgUrl} alt={product.desc} />

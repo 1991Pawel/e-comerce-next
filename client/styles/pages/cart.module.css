@@ -2,6 +2,23 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 1rem;
+  min-height: 70vh;
+}
+
+.empty__text {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 5rem;
+}
+.empty__info {
+  width: 250px;
+  height: 250px;
+  margin: 10rem auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .title {

@@ -13,7 +13,7 @@ export default function ProductList({ products, loading }) {
   if (!products.length) {
     return (
       <ul className={styles.products}>
-        <h2>no products found</h2>
+        <p className={styles.products__info}>no products found</p>
       </ul>
     );
   }
