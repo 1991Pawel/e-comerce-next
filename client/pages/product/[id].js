@@ -5,11 +5,11 @@ import styles from '../../styles/pages/product.module.css';
 import SideBar from 'components/SideBar/Sidebar';
 import { useRouter } from 'next/router';
 import { useCartContext } from '../../context/CartContext';
+import { fetchData } from '../../utlis/fetchData';
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`${process.env.BASE_URL}/products/${params.id}`);
-
-  const product = await res.json();
+  const fetchUrl = `${process.env.BASE_URL}/products/${params.id}`;
+  const product = await fetchData(fetchUrl);
   if (!product._id) {
     return {
       redirect: {
