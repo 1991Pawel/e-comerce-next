@@ -153,3 +153,45 @@
   border: none;
   text-indent: 1rem;
 }
+
+@media screen and (max-width: 650px) {
+  .collection {
+    height: auto;
+    flex-direction: column;
+  }
+  .collection__content {
+    width: 100%;
+    order: 2;
+    height: auto;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .collection__content::before {
+    height: 2rem;
+  }
+
+  .collection__photo {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  .collection__btn {
+    margin-top: 2rem;
+    height: 3rem;
+    width: 12rem;
+  }
+
+  .feature__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .feature__box {
+    margin: 1.5rem;
+  }
+
+  .feature__form {
+    margin-bottom: 1rem;
+    margin: 0 auto;
+  }
+}

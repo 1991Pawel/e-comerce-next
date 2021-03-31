@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.collection}>
-          <div>
+          <div className={styles.collection__photo}>
             <img className={styles.collection__img} src="./images/man.webp" alt="man collection" />
           </div>
           <div className={styles.collection__content}>

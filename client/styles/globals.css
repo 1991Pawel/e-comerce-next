@@ -35,6 +35,18 @@
   --container-width: 1400px;
 }
 
+@media screen and (max-width: 650px) {
+  :root {
+    /* FONT SIZE */
+    --fs-small: 1.1rem;
+    --fs-small-1: 1.2rem;
+    --fs-regular: 1.4rem;
+    --fs-regular-2: 1.8rem;
+    --fs-big: 2rem;
+    --fs-extra: 6rem;
+  }
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
