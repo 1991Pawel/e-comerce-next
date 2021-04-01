@@ -39,3 +39,16 @@
 .sidebar__link:hover {
   color: var(--bg-dark-color);
 }
+
+@media screen and (max-width: 1000px) {
+  .sidebar__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sidebar {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--bg-dark-color);
+    border-right: none;
+  }
+}

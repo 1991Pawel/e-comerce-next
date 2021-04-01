@@ -4,6 +4,12 @@
   min-height: 60vh;
 }
 
+@media screen and (max-width: 650px) {
+  .category {
+    grid-template-columns: 1fr;
+  }
+}
+
 .wrapper {
   max-width: var(--container-width);
   padding: 0 1rem;
