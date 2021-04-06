@@ -16,11 +16,9 @@
   align-items: center;
   background: transparent;
   border: 2px solid #fff;
+  color: #000;
 }
 
-.cart__btn:hover {
-  border: 20px solid #000;
-}
 .cartDropDown {
   position: relative;
   z-index: 2;
@@ -47,11 +45,17 @@
   content: '';
   display: block;
   position: absolute;
-  top: -2px;
+  top: -3px;
   right: 0;
   background: rgb(255, 255, 255);
-  height: 2px;
+  height: 5px;
   width: 32px;
+}
+
+@media screen and (max-width: 650px) {
+  .cartDropDown:hover > .cartDropDown__wrapper {
+    display: none;
+  }
 }
 
 .cartDropDown__content {

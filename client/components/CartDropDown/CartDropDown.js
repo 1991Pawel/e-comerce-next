@@ -6,9 +6,11 @@ import IconButton from 'components/IconButton/IconButton';
 export default function CartDropDown({ products }) {
   return (
     <div tabIndex="0" className={styles.cartDropDown}>
-      <button className={styles.cart__btn}>
-        <IconButton products={products} variant="cart" />
-      </button>
+      <Link href="/cart">
+        <a className={styles.cart__btn}>
+          <IconButton products={products} variant="cart" />
+        </a>
+      </Link>
       <div className={styles.cartDropDown__wrapper}>
         <ul className={styles.cartDropDown__list}>
           {!products.length ? (
