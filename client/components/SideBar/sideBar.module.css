@@ -40,7 +40,7 @@
   color: var(--bg-dark-color);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 650px) {
   .sidebar__list {
     display: flex;
     flex-wrap: wrap;
