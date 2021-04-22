@@ -46,11 +46,13 @@ export default function Login() {
             label="Password"
             required
           />
-          <button type="submit">Login</button>
+          <button className={styles.button} type="submit">
+            Login
+          </button>
         </form>
         <p>you dont have account ?</p>
         <Link href="/user/register">
-          <a>register</a>
+          <a>click here</a>
         </Link>
       </div>
     </Layout>

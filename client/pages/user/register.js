@@ -54,11 +54,13 @@ export default function register() {
             label="Confirm Password"
             required
           />
-          <button type="submit">Register</button>
+          <button className={styles.button} type="submit">
+            Register
+          </button>
         </form>
         <p>you already have account ?</p>
         <Link className={styles.button} href="/user/login">
-          <a>login</a>
+          <a>click here</a>
         </Link>
       </div>
     </Layout>
