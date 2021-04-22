@@ -42,7 +42,9 @@ export default function Header() {
           <IconButton variant="heart" />
           <IconButton variant="search" />
           <CartDropDown products={cartItems} />
-          <button className={styles.button}>Login</button>
+          <Link href="/user/register">
+            <a className={styles.button}>Login</a>
+          </Link>
         </div>
       </div>
     </header>

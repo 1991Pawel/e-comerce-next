@@ -54,6 +54,12 @@
   cursor: pointer;
   color: var(--text-light-color);
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: var(--fs-small-1);
 }
 
 .nav__menu {

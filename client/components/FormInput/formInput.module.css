@@ -1,0 +1,12 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.input {
+  padding: 0.5rem;
+}
+.label {
+  margin: 1rem 0;
+}

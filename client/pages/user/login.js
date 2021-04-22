@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
 import FormInput from '../../components/FormInput/FormInput';
+import styles from '../../styles/pages/loginAndRegister.module.css';
 
 const initialState = {
   email: '',
@@ -25,7 +26,7 @@ export default function Login() {
 
   return (
     <Layout>
-      <div>
+      <div className="wrapper">
         <h2>Login</h2>
         <span>Sign in with email and password</span>
         <form className="sign-up-form" onSubmit={handleSubmit}>
@@ -49,7 +50,7 @@ export default function Login() {
         </form>
         <p>you dont have account ?</p>
         <Link href="/user/register">
-          <a>Click</a>
+          <a>register</a>
         </Link>
       </div>
     </Layout>
