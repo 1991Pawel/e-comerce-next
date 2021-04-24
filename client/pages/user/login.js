@@ -19,9 +19,8 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('send form');
     console.log(values);
-    const response = await fetch(`${process.env.BASE_URL}/user/signin`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/user/signin`, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {

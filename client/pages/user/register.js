@@ -18,7 +18,7 @@ export default function register() {
     e.preventDefault();
     console.log('send form');
     console.log(values);
-    const response = await fetch(`${process.env.BASE_URL}/user/signup`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/user/signup`, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {
