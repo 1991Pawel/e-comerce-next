@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
 import FormInput from '../../components/FormInput/FormInput';
 import styles from '../../styles/pages/loginAndRegister.module.css';
+import useForm from '../'
 
 const initialState = {
   email: '',
