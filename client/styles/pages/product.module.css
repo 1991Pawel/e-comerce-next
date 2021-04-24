@@ -118,8 +118,6 @@
 
   .product__content {
     padding: 1rem;
-    border-top: 3px solid var(--bg-dark-color);
-    border-left: none;
   }
 }
 
@@ -127,5 +125,9 @@
   .product__inner {
     grid-template-columns: 1fr;
     grid-template-rows: 250px 350px;
+  }
+  .product__content {
+    border-left: none;
+    border-top: 3px solid var(--bg-dark-color);
   }
 }
