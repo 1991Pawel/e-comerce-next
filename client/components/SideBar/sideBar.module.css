@@ -40,15 +40,16 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .sidebar__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .sidebar {
     padding: 1rem;
     margin-bottom: 2rem;
     border-bottom: 3px solid var(--bg-dark-color);
     border-top: 3px solid var(--bg-dark-color);
     border-right: none;
+  }
+  .sidebar__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
