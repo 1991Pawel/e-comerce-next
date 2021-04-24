@@ -7,7 +7,8 @@ import useForm from '../../utlis/useForm';
 
 const initialState = {
   email: '',
-  password: ''
+  password: '',
+  confirmPassword: ''
 };
 
 export default function register() {
@@ -16,6 +17,20 @@ export default function register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('send form');
+    console.log(values);
+    const response = await fetch(`${process.env.BASE_URL}/user/signup`, {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const data = await response.json();
+    if (response.ok) {
+      router.push('/');
+      console.log(data.result);
+      login(data);
+    }
   };
 
   return (

@@ -1,22 +1,39 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
 import FormInput from '../../components/FormInput/FormInput';
 import styles from '../../styles/pages/loginAndRegister.module.css';
 import useForm from '../../utlis/useForm';
+import useAuth from '../../utlis/useAuth';
 
 const initialState = {
-  email: '',
-  password: ''
+  email: 'haslo@wp.pl',
+  password: 'haslo123'
 };
 
 export default function Login() {
   const { values, setValues, handleChange } = useForm(initialState);
+  const { login } = useAuth();
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('send form');
     console.log(values);
+    const response = await fetch(`${process.env.BASE_URL}/user/signin`, {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const data = await response.json();
+    if (response.ok) {
+      router.push('/');
+      console.log(data.result);
+      login(data);
+    }
   };
 
   return (

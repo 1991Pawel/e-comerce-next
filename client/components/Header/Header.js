@@ -3,6 +3,7 @@ import styles from 'components/Header/header.module.css';
 import CartDropDown from 'components/CartDropDown/CartDropDown';
 import { useCartContext } from '../../context/CartContext';
 import IconButton from 'components/IconButton/IconButton';
+import useAuth from '../../utlis/useAuth';
 
 const path = [
   {
@@ -17,6 +18,7 @@ const path = [
 
 export default function Header() {
   const { cartItems } = useCartContext();
+  const { user, login } = useAuth();
   return (
     <header className={styles.header}>
       <div className={styles.header__inner}>
@@ -42,9 +44,15 @@ export default function Header() {
           <IconButton variant="heart" />
           <IconButton variant="search" />
           <CartDropDown products={cartItems} />
-          <Link href="/user/register">
-            <a className={styles.button}>Login</a>
-          </Link>
+          {Boolean(user) ? (
+            <button onClick={() => login(null)} className={styles.button}>
+              Logout
+            </button>
+          ) : (
+            <Link href="/user/login">
+              <a className={styles.button}>Login</a>
+            </Link>
+          )}
         </div>
       </div>
     </header>
