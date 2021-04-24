@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
 import FormInput from '../../components/FormInput/FormInput';
 import styles from '../../styles/pages/loginAndRegister.module.css';
+import useForm from '../../utlis/useForm';
 
 const initialState = {
   email: '',
@@ -10,18 +11,12 @@ const initialState = {
 };
 
 export default function Login() {
-  const [values, setValues] = useState(initialState);
-
-  const handleChange = (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    });
-  };
+  const { values, setValues, handleChange } = useForm(initialState);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('send form');
+    console.log(values);
   };
 
   return (
