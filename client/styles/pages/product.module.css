@@ -91,6 +91,7 @@
   text-transform: uppercase;
 }
 .select {
+  font-size: 1.6rem;
   margin-top: 0.5rem;
   height: 4rem;
   width: 100%;

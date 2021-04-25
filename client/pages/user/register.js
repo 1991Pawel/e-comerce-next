@@ -31,9 +31,8 @@ export default function register() {
     });
     const data = await response.json();
     if (response.ok) {
-      router.push('/');
-      console.log(data.result);
       login(data);
+      router.back();
     }
   };
 

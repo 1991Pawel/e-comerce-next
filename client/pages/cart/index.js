@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { useCartContext } from '../context/CartContext';
+import { useCartContext } from '../../context/CartContext';
 import { VscTrash } from 'react-icons/vsc';
 import Layout from 'components/Layout/Layout';
-import styles from '../styles/pages/cart.module.css';
+import styles from '../../styles/pages/cart.module.css';
 import { MdAddShoppingCart } from 'react-icons/md';
 
 export default function Cart() {
@@ -78,7 +78,7 @@ export default function Cart() {
                 Delivery: <span className={styles.cart__list__subitem}>free delivery</span>
               </li>
             </ul>
-            <Link href="/cart">
+            <Link href="cart/checkout">
               <a className={styles.cart__btn} href="">
                 Go to checkout
               </a>
