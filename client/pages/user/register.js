@@ -4,6 +4,8 @@ import Layout from '../../components/Layout/Layout';
 import FormInput from '../../components/FormInput/FormInput';
 import styles from '../../styles/pages/loginAndRegister.module.css';
 import useForm from '../../utlis/useForm';
+import { useRouter } from 'next/router';
+import useAuth from '../../utlis/useAuth';
 
 const initialState = {
   email: '',
@@ -13,6 +15,8 @@ const initialState = {
 
 export default function register() {
   const { values, setValues, handleChange } = useForm(initialState);
+  const { login } = useAuth();
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

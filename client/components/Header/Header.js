@@ -44,7 +44,7 @@ export default function Header() {
           <IconButton variant="heart" />
           <IconButton variant="search" />
           <CartDropDown products={cartItems} />
-          {Boolean(user) ? (
+          {user?.token ? (
             <button onClick={() => login(null)} className={styles.button}>
               Logout
             </button>
