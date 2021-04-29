@@ -8,3 +8,10 @@
   border: none;
   cursor: pointer;
 }
+
+.error {
+  display: block;
+  color: red;
+  margin: 1rem 0;
+  font-size: 2rem;
+}

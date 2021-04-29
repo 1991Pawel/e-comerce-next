@@ -14,6 +14,7 @@ const initialState = {
 
 export default function Login() {
   const { values, setValues, handleChange } = useForm(initialState);
+  const [error, setError] = useState(null);
   const { login } = useAuth();
   const router = useRouter();
 
@@ -31,6 +32,8 @@ export default function Login() {
     if (response.ok) {
       login(data);
       router.back();
+    } else {
+      setError(data.message);
     }
   };
 
@@ -39,6 +42,7 @@ export default function Login() {
       <div className="wrapper">
         <h2>Login</h2>
         <span>Sign in with email and password</span>
+        {error && <span className={styles.error}>{error}</span>}
         <form className="sign-up-form" onSubmit={handleSubmit}>
           <FormInput
             type="email"
@@ -56,10 +60,12 @@ export default function Login() {
             label="Password"
             required
           />
+
           <button className={styles.button} type="submit">
             Login
           </button>
         </form>
+
         <p>you dont have account ?</p>
         <Link href="/user/register">
           <a>click here</a>

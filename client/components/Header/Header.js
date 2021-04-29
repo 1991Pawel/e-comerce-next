@@ -45,9 +45,11 @@ export default function Header() {
           <IconButton variant="search" />
           <CartDropDown products={cartItems} />
           {user?.token ? (
-            <button onClick={() => login(null)} className={styles.button}>
-              Logout
-            </button>
+            <Link href="/" className={styles.button}>
+              <a onClick={() => login(null)} className={styles.button}>
+                Logout
+              </a>
+            </Link>
           ) : (
             <Link href="/user/login">
               <a className={styles.button}>Login</a>
